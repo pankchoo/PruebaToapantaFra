@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "9f5b852b-4ade-46d3-ac26-5a7e7f628883",
+		"name": "EndPointToapanta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ConsultaCliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44315/api/Clientes/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creacion Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"pIdentificacion\": \"1717934311\",\r\n  \"pNombre\": \"Andres Toapanta\",\r\n  \"pGenero\": \"Masculino\",\r\n  \"pEdad\": \"31\",\r\n  \"pDireccion\": \"Carapungo\",\r\n  \"pTelefono\": \"0973732742\",\r\n  \"clContrasenia\": \"1111\",\r\n  \"clEstado\": true\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Clientes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creacion Cuenta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cuNumeroCuenta\": \"585545\",\r\n  \"cuIdCliente\": 4,\r\n  \"cuTipo\": \"Corriente\",\r\n  \"cuEstado\": true\r\n }"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Cuentas"
+					]
+				},
+				"description": "Creacion de Cuenta"
+			},
+			"response": []
+		},
+		{
+			"name": "MovimientoExcedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"478758\",\r\n  \"moTipoMovimiento\": \"Retiro\",\r\n  \"moSaldoInicial\": 0,\r\n  \"moMovimiento\": 1500\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retiro1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"585545\",\r\n  \"moTipoMovimiento\": \"Retiro\",\r\n  \"moMovimiento\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retiro2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"225487\",\r\n  \"moTipoMovimiento\": \"Retiro\",\r\n  \"moMovimiento\": 40\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposito1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"585545\",\r\n  \"moTipoMovimiento\": \"Deposito\",\r\n  \"moMovimiento\": 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposito2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"495878\",\r\n  \"moTipoMovimiento\": \"Deposito\",\r\n  \"moMovimiento\": 150\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Movimientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaMovimientoFechas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Movimientos/1721213131&2022-05-16&2022-05-17",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Movimientos",
+						"1721213131&2022-05-16&2022-05-17"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
